@@ -1,0 +1,16 @@
+{
+  "name": "webpack-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --history-api-fallback --inline --progress"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2",
+    "webpack-merge": "^4.1.0"
+  }
+}
