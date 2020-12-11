@@ -27,10 +27,11 @@ GameModel.prototype.playerMove = function (direction) {
 }
 
 GameModel.prototype.generateObject = function (scene, id) {
+    const rect = scene.getBoundingClientRect();
     return new GameObject(
         id,
-        helper.randomNumber(scene.offsetWidth, scene.offsetWidth + 50),
-        helper.randomNumber(0, scene.offsetHeight),
+        helper.randomNumber(rect.width, rect.width + 50),
+        helper.randomNumber(0, rect.height),
         helper.randomNumber(10, 50),
         helper.randomNumber(10, 50),
         3
