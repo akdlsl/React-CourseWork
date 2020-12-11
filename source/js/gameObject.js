@@ -10,16 +10,18 @@ var GameObject = function(id, x, y, w, h, velocity, isPlayer) {
         return;
     }
     this.guid = helper.getGuid();
-    var mainScene = helper.getMainScene();
-    mainScene.innerHTML += `<span id="${this.guid}" class=${isPlayer ? "scene__object" : "scene__player"}></span>`;
+    this.mainScene = helper.getMainScene();
+    this.mainScene.innerHTML += `<circle id="${this.guid}" fill="${!isPlayer ? "red" : "green"}"/>`
+
+
+ //   mainScene.innerHTML += `<span id="${this.guid}" class=${isPlayer ? "scene__object" : "scene__player"}></span>`;
 }
 
 GameObject.prototype.render = function() {
     const object = document.getElementById(this.guid);
-    object.style.top = `${this.y}px`;
-    object.style.left = `${this.x}px`;
-    object.style.height = `${this.h}px`;
-    object.style.width = `${this.w}px`;
+    object.setAttribute('cy' ,this.y);
+    object.setAttribute('cx', this.x);
+    object.setAttribute('r', this.h);
 }
 
 GameObject.prototype.moveLeft = function () {
