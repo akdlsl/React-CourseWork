@@ -12,7 +12,7 @@ var GameController = function () {
     }
 
 
-    function updateObjects() {
+    (function updateObjects() {
         for (const i in model.ObjectList) {
             if (model.isObjectOutOfScene(model.ObjectList[i])) {
                 model.ObjectList[i] = model.generateObject(scene, model.ObjectList[i].guid);
@@ -28,16 +28,5 @@ var GameController = function () {
 
         model.update();
         model.ObjectList.forEach(object => model.intersect(model.player, object) ? model.loseCount() : null);
-    }
-
-    window.addEventListener('keydown', (event) => {
-        switch (event.key) {
-            case 'a': model.playerMove(Direction.Left); break;
-            case 'd': model.playerMove(Direction.Right); break;
-            case 'w': model.playerMove(Direction.Up); break;
-            case 's': model.playerMove(Direction.Down); break;
-        }
-    });
-
-    updateObjects();
+    })();
 }
