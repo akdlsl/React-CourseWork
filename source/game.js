@@ -1,2 +1,0 @@
-
-var controller = new GameController();
