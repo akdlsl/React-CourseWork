@@ -1,6 +1,7 @@
 import './App.scss';
 import {SongItem} from "./components/SongItem";
 import { Component} from 'react';
+import {SoundBuffer} from "./Audio";
 
 class App extends Component {
     constructor(props) {
@@ -8,25 +9,20 @@ class App extends Component {
 
         this.state = {
             songList: []
-        }
+        };
     }
 
-    addSong(files) {
-        console.log(files);
-        const reader = new FileReader();
-        const context = this;
-        reader.addEventListener("load", function () {
-            // convert image file to base64 string
-            const fileURL = reader.result;
-            console.log(fileURL);
+    async addSong(files) {
+        const buffer = new SoundBuffer(files[0].name);
 
-            context.setState(prevState => ({songList: [...prevState.songList, [(<SongItem src={fileURL}></SongItem>)]]}));
-           // this.state.songList.push(());
-        }, false);
+        debugger;
+        this.setState(prevState => ({
+            songList: [...prevState.songList, [(<SongItem buffer={buffer}></SongItem>)]]
+        }));
 
-        for (let index = 0; index < files.length; index++) {
+  /*      for (let index = 0; index < files.length; index++) {
             reader.readAsDataURL(files[index]);
-        }
+        }*/
     }
 
     render() {

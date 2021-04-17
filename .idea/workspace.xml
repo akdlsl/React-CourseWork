@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="018084bb-8220-4b1b-8368-04ce0489f043" name="Default Changelist" comment="lab8">
-      <change afterPath="$PROJECT_DIR$/source/app.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SongItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SongItem.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/js/event.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/js/gameController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/js/gameModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/js/gameObject.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/js/gameView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/js/helper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+    <list default="true" id="018084bb-8220-4b1b-8368-04ce0489f043" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/play1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Audio.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SongItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SongItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SongItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SongItem.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -48,9 +41,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\web-labs\public" />
+      <recent name="C:\web-labs\src\components" />
       <recent name="C:\web-labs" />
     </key>
   </component>
@@ -105,7 +101,10 @@
       <workItem from="1608500063068" duration="600000" />
       <workItem from="1608877605764" duration="17000" />
       <workItem from="1616953068765" duration="12627000" />
-      <workItem from="1616999015598" duration="372000" />
+      <workItem from="1616999015598" duration="429000" />
+      <workItem from="1617122405854" duration="7541000" />
+      <workItem from="1617305742195" duration="6731000" />
+      <workItem from="1618169692281" duration="2000" />
     </task>
     <task id="LOCAL-00001" summary="lab8">
       <created>1607675458221</created>
@@ -114,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607675458221</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="lab11">
+      <created>1616999430311</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616999430311</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,32 +128,41 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lab8" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab8" />
+    <MESSAGE value="lab11" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab11" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1616966312430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1616966312430" />
+    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1616999429754">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1616999429754" />
     <state x="747" y="274" key="FileChooserDialogImpl" timestamp="1608877620262">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="747" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608877620262" />
-    <state width="949" height="281" key="GridCell.Tab.0.bottom" timestamp="1616967376070">
+    <state width="938" height="281" key="GridCell.Tab.0.bottom" timestamp="1617312505573">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616967376070" />
-    <state width="949" height="281" key="GridCell.Tab.0.center" timestamp="1616967376070">
+    <state width="938" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617312505573" />
+    <state width="938" height="281" key="GridCell.Tab.0.center" timestamp="1617312505573">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616967376070" />
-    <state width="949" height="281" key="GridCell.Tab.0.left" timestamp="1616967376070">
+    <state width="938" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617312505573" />
+    <state width="938" height="281" key="GridCell.Tab.0.left" timestamp="1617312505572">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616967376070" />
-    <state width="949" height="281" key="GridCell.Tab.0.right" timestamp="1616967376070">
+    <state width="938" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617312505572" />
+    <state width="938" height="281" key="GridCell.Tab.0.right" timestamp="1617312505573">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="949" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616967376070" />
+    <state width="938" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617312505573" />
+    <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1617306398088">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617306398088" />
   </component>
 </project>

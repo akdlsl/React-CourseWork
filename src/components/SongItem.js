@@ -1,5 +1,6 @@
 import {Component} from 'react'
 import styles from './SongItem.module.scss';
+import {PlayerApi} from "../Audio";
 
 export class SongItem extends Component {
     constructor(props) {
@@ -8,7 +9,7 @@ export class SongItem extends Component {
         console.log(props);
         this.state = {
             played: this.props.played,
-            src: this.props.src
+            buffer: this.props.buffer
         };
 
     //    var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -19,22 +20,28 @@ export class SongItem extends Component {
         console.log(this.state);
         this.setState(prevState => ({played: !prevState.played}));
         //  this.state.played = !this.state.played;
+    };
+
+    play = () => {
+        debugger;
+        PlayerApi.play(this.state.buffer);
     }
 
     render() {
         return (
-            // <div className={styles.container} onClick={this.click}><audio src={this.state.src} controls autoPlay>{this.state.played ? 'Да' : 'Нет'}</audio></div>
-
             <div className={styles.audioPlayerContainer}>
-                <audio src="https://assets.codepen.io/4358584/Anitek_-_Komorebi.mp3" preload="metadata" loop></audio>
-                <p>audio player ish</p>
-                <button class={styles.playIcon}></button>
-                <span class={styles.currentTime}>0:00</span>
-                <input type="range" className="seek-slider" max="100" value="0"/>
-                <span className={styles.duration}> 0:00 </span>
-                <output id="volume-output">100</output>
+  {/*              <audio src={this.state.src}></audio>*/}
+                <p class={styles.name}>Song name</p>
+                <div style={{display: 'flex'}}>
+                    <button className={styles.playIcon} onClick={this.play}><img src="play1.png"/></button>
+                    <span className={styles.currentTime}>0:00</span>
+                    <input type="range" className={styles.progressSlider} max="100" value="0"/>
+                    <span className={styles.duration}> 0:00 </span>
+                </div>
+
+{/*                <output id="volume-output">100</output>
                 <input type="range" id="volume-slider" max="100" value="100"/>
-                <button id="mute-icon"></button>
+                <button id="mute-icon"></button>*/}
             </div>
         );
     }
