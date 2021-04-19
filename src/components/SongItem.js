@@ -1,30 +1,43 @@
 import {Component} from 'react'
 import styles from './SongItem.module.scss';
-import {PlayerApi} from "../Audio";
+import {playerAPI} from "../Audio";
+
 
 export class SongItem extends Component {
     constructor(props) {
         super(props);
 
-        console.log(props);
+        console.log('props', props);
         this.state = {
             played: this.props.played,
             buffer: this.props.buffer
         };
 
-    //    var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        // audioCtx.
     }
 
     click = () => {
-        console.log(this.state);
         this.setState(prevState => ({played: !prevState.played}));
         //  this.state.played = !this.state.played;
-    };
+    }
 
-    play = () => {
-        debugger;
-        PlayerApi.play(this.state.buffer);
+    play = async () => {
+        await playerAPI.play(this.state.buffer);
+    }
+
+    stop = () => {
+
+    }
+
+    delete = () => {
+
+    }
+
+    moveUp = () => {
+
+    }
+
+    moveDown = () => {
+
     }
 
     render() {

@@ -1,7 +1,9 @@
 import './App.scss';
 import {SongItem} from "./components/SongItem";
 import { Component} from 'react';
-import {SoundBuffer} from "./Audio";
+import {getBlob} from "./Audio";
+
+
 
 class App extends Component {
     constructor(props) {
@@ -12,17 +14,10 @@ class App extends Component {
         };
     }
 
-    async addSong(files) {
-        const buffer = new SoundBuffer(files[0].name);
-
-        debugger;
+    addSong(files) {
         this.setState(prevState => ({
-            songList: [...prevState.songList, [(<SongItem buffer={buffer}></SongItem>)]]
+            songList: [...prevState.songList, [(<SongItem buffer={getBlob(files[0])}></SongItem>)]]
         }));
-
-  /*      for (let index = 0; index < files.length; index++) {
-            reader.readAsDataURL(files[index]);
-        }*/
     }
 
     render() {
