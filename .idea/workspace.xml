@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="018084bb-8220-4b1b-8368-04ce0489f043" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/pause.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Observable.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/play1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/play.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Audio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Audio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SongItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SongItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SongItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SongItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SongItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SongItem.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,10 +28,16 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1janunnvSeoxHrbDGAiCNWEkboI" />
@@ -34,11 +49,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\web-labs\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -60,6 +76,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
@@ -104,6 +121,9 @@
       <workItem from="1618169692281" duration="2000" />
       <workItem from="1618658962818" duration="42000" />
       <workItem from="1618748734912" duration="12905000" />
+      <workItem from="1618984369180" duration="46000" />
+      <workItem from="1619028852783" duration="3564000" />
+      <workItem from="1619066547165" duration="6806000" />
     </task>
     <task id="LOCAL-00001" summary="lab8">
       <created>1607675458221</created>
@@ -146,22 +166,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1618658985354" />
-    <state width="938" height="281" key="GridCell.Tab.0.bottom" timestamp="1617312505573">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1619073588470">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617312505573" />
-    <state width="938" height="281" key="GridCell.Tab.0.center" timestamp="1617312505573">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1619073588470" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1619073588469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617312505573" />
-    <state width="938" height="281" key="GridCell.Tab.0.left" timestamp="1617312505572">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1619073588469" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1619073588469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617312505572" />
-    <state width="938" height="281" key="GridCell.Tab.0.right" timestamp="1617312505573">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1619073588469" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1619073588470">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617312505573" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1619073588470" />
     <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1617306398088">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -170,9 +190,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1618857567329" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1618767340955">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1619071631299">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1618767340955" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1619071631299" />
   </component>
 </project>

@@ -12,9 +12,12 @@
     width: 80%;
 }
 
-.playIcon img {
-    width: 32px;
-    height: 32px;
+.playIcon, .stopIcon
+{
+    img {
+        width: 32px;
+        height: 32px;
+    }
 }
 
 .name {

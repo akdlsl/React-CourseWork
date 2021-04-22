@@ -12,6 +12,12 @@ class PlayerAPI
         this.audio.load();
         await this.audio.play();
     }
+
+    stop(src) {
+        if (this.audio.src === src) {
+            this.audio.pause();
+        }
+    }
 }
 
 export const getBlob = (url) => {

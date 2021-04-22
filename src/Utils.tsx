@@ -1,4 +1,4 @@
-export const makeRequest = function(url, responseType= "", method = 'GET') {
+export const makeRequest = function(url: string, responseType= "", method = 'GET') {
     return new Promise(function (resolve, reject) {
         let xhr = new XMLHttpRequest();
         xhr.open(method, url, true);
