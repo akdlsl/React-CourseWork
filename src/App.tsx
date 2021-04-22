@@ -1,10 +1,11 @@
 import './App.scss';
-import {SongItem, SongItemState} from "./components/SongItem";
 import {getBlob, playerAPI} from "./Audio";
-import {Component} from "react";
+import React, {Component} from "react";
+import ContentComponent from "./components/Content/Content";
+import {PlayListComponent} from "./components/PlayList/PlayList";
+import {PlayBarComponent} from "./components/PlayBar/PlayBar";
 
 interface AppState {
-    songList: SongItemState[];
 }
 
 interface AppProps {
@@ -19,7 +20,7 @@ class App extends Component<AppProps, AppState> {
         };
     }
 
-    addSong(files: FileList | null) {
+/*    addSong(files: FileList | null) {
         if (!files) {
             return;
         }
@@ -52,29 +53,38 @@ class App extends Component<AppProps, AppState> {
                 isPlay: false
             }))
         }));
-    }
+    }*/
 
 
     render() {
         return (
-            <div className="App">
+            <div className={'app'}>
+                <ContentComponent>
+                    <PlayListComponent/>
+                </ContentComponent>
+                <PlayBarComponent>
+                    sssss
+                </PlayBarComponent>
+            </div>
+
+           /* <div className="App">
                 <span id="text"></span>
                 <input type="file" id="file" onChange={(e) => this.addSong(e.target.files)} accept=".M4A,.FLAC,.MP3,.MP4,.WAV,.WMA,.AAC"></input>
 
 
                 {this.state.songList.map((a, index) => (
-                    <SongItem
+                    <SongComponent
                         key={index}
                         src={a.src}
                         isPlay={a.isPlay}
                         play={this.play}
                         stop={this.stop}>
-                    </SongItem>
+                    </SongComponent>
                 ))}
 
                 <ul id="playlist">
                 </ul>
-            </div>
+            </div>*/
         );
     }
 }

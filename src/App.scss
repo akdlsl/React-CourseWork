@@ -1,28 +1,6 @@
-#drop-area {
-  width: 100%;
-  padding: 20px 0;
 
+.app {
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
-#drop-area.highlight {
-  background: lightslategray;
-}
-
-#playlist {
-  display:table;
-}
-#playlist li{
-  cursor:pointer;
-  padding:8px;
-}
-#playlist li:hover{
-  color:blue;
-}
-
-button {
-  padding: 0;
+  flex-flow: column;
+  height: 100vh;
 }

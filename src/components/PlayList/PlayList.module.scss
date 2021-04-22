@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+
+.playList {
+  display: flex;
+  flex-flow: column;
+}
+
+.addSongBtn {
+  background: $black;
+  color: $white;
+  font-size: 18px;
+  margin: 15px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+input[type="file"] {
+  display: none;
+}
