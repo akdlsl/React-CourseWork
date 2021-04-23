@@ -16,22 +16,22 @@
 
   &:hover {
     #iconPath {
-      fill: $text;
+      fill: $blue;
     }
   }
   &:active {
     #iconPath {
-      fill: darken($text-secondary, 5%);
+      fill: darken($blue, 5%);
     }
   }
 
   #iconPath {
-    fill: $text-secondary;
+    fill: $white;
   }
 
   &.active {
     #iconPath {
-      fill: $primary;
+      fill: $blue;
     }
     &::after {
       position: absolute;

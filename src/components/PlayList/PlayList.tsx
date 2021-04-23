@@ -39,7 +39,7 @@ export class PlayListComponent extends Component<any, IData<ISong[]>> {
                 <input type="file" id="file-upload" onChange={(e) => this.addSong(e.target.files)} accept=".M4A,.FLAC,.MP3,.MP4,.WAV,.WMA,.AAC"></input>
                 <div className={styles.playList}>
                     {this.state.data.map(a => (
-                        <SongComponent src={a.src} title={a.title} id={a.id}></SongComponent>
+                        <SongComponent src={a.src} title={a.title} id={a.id} currentTime={a.currentTime} duration={a.duration}></SongComponent>
                     ))}
                 </div>
             </div>
