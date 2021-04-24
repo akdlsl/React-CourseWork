@@ -3,9 +3,8 @@ import React, {Component} from "react";
 import {ISong} from "../../models/ISong";
 import {Subscription} from "rxjs";
 import {playListService} from "../../services/PlayList.service";
-import PlayerIcon from "../PlayerIcon/PlayerIcon";
-import {EIcon} from "../../models/EIcon";
 import {EMode, IPlayer} from "../../models/IPlayer";
+import Icon from "../Icon/Icon";
 
 interface PlayerBarState {
     song: ISong;
@@ -55,7 +54,16 @@ export class PlayBarComponent extends Component<any, PlayerBarState> {
     }
 
     setMode = (mode: EMode) => {
-        playListService.setMode(mode);
+        const newMode = this.state.player.mode === mode ? EMode.Standart : mode;
+        playListService.setMode(newMode);
+    }
+
+    volumeUp = () => {
+        playListService.setVolume(this.state.player.volume + 0.1);
+    }
+
+    volumeDown = () => {
+        playListService.setVolume(this.state.player.volume - 0.1);
     }
 
     changeCurrentTime = (e) => {
@@ -81,19 +89,23 @@ export class PlayBarComponent extends Component<any, PlayerBarState> {
 
         const progress = (this.state.song.currentTime / this.state.song.duration) * 100;
         const button = this.state.player?.isPlay
-            ? <PlayerIcon size='50px' icon={EIcon.Pause} isActive={false} onClick={this.pause}/>
-            : <PlayerIcon size='50px' icon={EIcon.Play} isActive={false} onClick={this.play}/>;
+            ? <div className={styles.control} onClick={this.pause}><Icon name='pause'/></div>
+            : <div className={styles.control} onClick={this.play}><Icon name='play'/></div>;
         return (
             <div className={styles.container}>
                 <span className={styles.title}>{this.state.song?.title}</span>
                 <div className={styles.controls}>
-                    <PlayerIcon size='50px' icon={EIcon.Backward} isActive={false} onClick={this.backward}/>
+                    <div className={styles.control} onClick={this.backward}><Icon name='previous'/></div>
                     {button}
-                    <PlayerIcon size='50px' icon={EIcon.Forward} isActive={false} onClick={this.forward}/>
+                    <div className={styles.control} onClick={this.forward}><Icon name='next'/></div>
                     <div className={styles.progressBar} onClick={(e) => this.changeCurrentTime(e)}>
                         <span style={{width: `${progress}%`}}></span>
                     </div>
-                    <PlayerIcon size='50px' icon={EIcon.Random} isActive={false} onClick={() => this.setMode(EMode.Random)}/>
+                    <div className={`${styles.control} ${styles.controlSecondary} ${this.state.player.mode === EMode.Random && styles.controlActive}`} onClick={() => this.setMode(EMode.Random)}><Icon name='random'/></div>
+                    <div className={`${styles.control} ${styles.controlSecondary} ${this.state.player.mode === EMode.Repeat && styles.controlActive}`} onClick={() => this.setMode(EMode.Repeat)}><Icon name='repeat'/></div>
+                    <span>Volume: {this.state.player.volume * 100}% </span>
+                    <div className={`${styles.control} ${styles.controlSecondary}`} onClick={this.volumeUp}><Icon name='volume-increase'/></div>
+                    <div className={`${styles.control} ${styles.controlSecondary}`} onClick={this.volumeDown}><Icon name='volume-decrease'/></div>
                 </div>
             </div>
         )

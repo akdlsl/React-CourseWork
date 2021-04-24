@@ -13,10 +13,12 @@ class AudioService
     }
 
     async play(src: string, currentTime: number) {
-        this.audio.src = src;
-        this.audio.load();
         this.audio.currentTime = currentTime;
-        await this.audio.play();
+        if (this.audio.src !== src || this.audio.paused) {
+            this.audio.src = src;
+            this.audio.load();
+            await this.audio.play();
+        }
 
         return {
             duration: this.audio.duration,

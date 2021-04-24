@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <symbol id="repeat" viewBox="0 0 32 32">
+            <path d="M4 10h20v6l8-8-8-8v6h-24v12h4zM28 22h-20v-6l-8 8 8 8v-6h24v-12h-4z" fill="currentColor"></path>
+        </symbol>
+        <symbol  id="next" viewBox="0 0 32 32">
+            <path d="M24 4v24h-4v-11l-10 10v-22l10 10v-11z" fill="currentColor"></path>
+        </symbol>
+        <symbol id="pause" viewBox="0 0 32 32">
+            <path d="M4 4h10v24h-10zM18 4h10v24h-10z" fill="currentColor"></path>
+        </symbol>
+        <symbol id="play" viewBox="0 0 32 32">
+            <path d="M6 4l20 12-20 12z" fill="currentColor"></path>
+        </symbol>
+        <symbol id="previous" viewBox="0 0 32 32">
+            <path d="M8 28v-24h4v11l10-10v22l-10-10v11z" fill="currentColor"></path>
+        </symbol>
+        <symbol id="random" viewBox="0 0 32 32">
+            <path d="M24 22h-3.172l-5-5 5-5h3.172v5l7-7-7-7v5h-4c-0.53 0-1.039 0.211-1.414 0.586l-5.586 5.586-5.586-5.586c-0.375-0.375-0.884-0.586-1.414-0.586h-6v4h5.172l5 5-5 5h-5.172v4h6c0.53 0 1.039-0.211 1.414-0.586l5.586-5.586 5.586 5.586c0.375 0.375 0.884 0.586 1.414 0.586h4v5l7-7-7-7v5z" fill="currentColor"></path>
+        </symbol>
+        <symbol id="volume-decrease" viewBox="0 0 32 32">
+            <path d="M16 14h16v4h-16v-4z" fill="currentColor"></path>
+            <path d="M13 30c-0.26 0-0.516-0.102-0.707-0.293l-7.707-7.707h-3.586c-0.552 0-1-0.448-1-1v-10c0-0.552 0.448-1 1-1h3.586l7.707-7.707c0.286-0.286 0.716-0.372 1.090-0.217s0.617 0.519 0.617 0.924v26c0 0.404-0.244 0.769-0.617 0.924-0.124 0.051-0.254 0.076-0.383 0.076z" fill="currentColor"></path>
+        </symbol>
+        <symbol id="volume-increase" viewBox="0 0 32 32">
+            <path d="M32 18h-6v6h-4v-6h-6v-4h6v-6h4v6h6v4z" fill="currentColor"></path>
+            <path d="M13 30c-0.26 0-0.516-0.102-0.707-0.293l-7.707-7.707h-3.586c-0.552 0-1-0.448-1-1v-10c0-0.552 0.448-1 1-1h3.586l7.707-7.707c0.286-0.286 0.716-0.372 1.090-0.217s0.617 0.519 0.617 0.924v26c0 0.404-0.244 0.769-0.617 0.924-0.124 0.051-0.254 0.076-0.383 0.076z" fill="currentColor"></path>
+        </symbol>
+    </defs>
+</svg>

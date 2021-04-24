@@ -2,12 +2,13 @@ import {ISong} from "../models/ISong";
 import {Subject, Subscription} from "rxjs";
 import {EMode, IPlayer} from "../models/IPlayer";
 import {audioService, getBlob} from "./Audio.service";
+import {Simulate} from "react-dom/test-utils";
 
 class PlayListService {
     private _songs: ISong[] = [];
     private _activeId: number;
     private _player: IPlayer = {
-        volume: 5,
+        volume: 0.5,
         isPlay: false,
         mode: EMode.Standart
     };
@@ -75,7 +76,8 @@ class PlayListService {
     }
 
     play(currentTime = 0) {
-        audioService.play(this.findSongById(this._activeId)?.src, currentTime).then(result => {
+        const song = this.findSongById(this._activeId);
+        audioService.play(song?.src, currentTime).then(result => {
             this._player.isPlay = true;
             const song = this.findSongById(this._activeId);
             song.currentTime = result.currentTime;
@@ -84,7 +86,7 @@ class PlayListService {
         })
     }
 
-    pause () {
+    pause() {
         this._player.isPlay = false;
         this.player$.next(this._player);
         audioService.pause(this.findSongById(this._activeId)?.src);
@@ -96,8 +98,8 @@ class PlayListService {
 
         switch (this._player.mode) {
             case EMode.Standart: this._activeId = this._songs[newIdx >= this._songs.length ? 0 : newIdx].id; break;
-            case EMode.Repeat: this.play(0); break;
-            case EMode.Random: const inx = Math.ceil(Math.random()) % (this._songs.length); this._activeId = this._songs[inx].id; this.play(0); break;
+            case EMode.Repeat: this._songs[idx].currentTime = 0; break;
+            case EMode.Random: const inx = Math.floor(Math.random() * this._songs.length); this._activeId = this._songs[inx].id; break;
         }
 
         this.selectSong(this._activeId);
@@ -113,6 +115,14 @@ class PlayListService {
     setMode(mode: EMode) {
         this._player.mode = mode;
         this.player$.next(this._player);
+    }
+
+    setVolume(volume: number) {
+        if (volume >= 0 && volume <= 1) {
+            this._player.volume = volume;
+            audioService.audio.volume = volume;
+            this.player$.next(this._player);
+        }
     }
 }
 
