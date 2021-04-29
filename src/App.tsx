@@ -12,13 +12,13 @@ class App extends Component {
 
     render() {
         return (
-            <div className={'app'}>
+            <main className={'app'}>
                 <ContentComponent>
                     <PlayListComponent/>
                 </ContentComponent>
                 <PlayBarComponent>
                 </PlayBarComponent>
-            </div>
+            </main>
         );
     }
 }

@@ -24,13 +24,40 @@ export class PlayBarComponent extends Component<any, PlayerBarState> {
     }
 
     componentDidMount(): void {
-        this.subscriptions.push( playListService.activeSong$.subscribe(song => {
+        this.subscriptions.push(playListService.activeSong$.subscribe(song => {
             this.setState({song: song})
         }));
 
-        this.subscriptions.push( playListService.player$.subscribe(player => {
+        this.subscriptions.push(playListService.player$.subscribe(player => {
             this.setState({player: player})
         }));
+
+        document.addEventListener('keyup', (event) => {
+                switch (event.keyCode) {
+                    case 32:
+                        this.state.player.isPlay ? this.pause() : this.play();
+                        break;
+                    case 37:
+                        this.backward();
+                        break;
+                    case 39:
+                        this.forward();
+                        break;
+                    case 49:
+                        this.setMode(EMode.Repeat);
+                        break;
+                    case 50:
+                        this.setMode(EMode.Random);
+                        break;
+                    case 107:
+                        this.volumeUp();
+                        break;
+                    case 109:
+                        this.volumeDown();
+                        break;
+                }
+            }
+        )
     }
 
     componentWillUnmount(): void {
@@ -89,23 +116,33 @@ export class PlayBarComponent extends Component<any, PlayerBarState> {
 
         const progress = (this.state.song.currentTime / this.state.song.duration) * 100;
         const button = this.state.player?.isPlay
-            ? <div className={styles.control} onClick={this.pause}><Icon name='pause'/></div>
-            : <div className={styles.control} onClick={this.play}><Icon name='play'/></div>;
+            ? <button aria-label='Pause' aria-current={this.state.player.isPlay} className={styles.control}
+                      onClick={this.pause}><Icon name='pause'/></button>
+            : <button aria-label='Play' aria-current={this.state.player.isPlay} className={styles.control}
+                      onClick={this.play}><Icon name='play'/></button>;
         return (
             <div className={styles.container}>
                 <span className={styles.title}>{this.state.song?.title}</span>
                 <div className={styles.controls}>
-                    <div className={styles.control} onClick={this.backward}><Icon name='previous'/></div>
+                    <button aria-label='Previous' className={styles.control} onClick={this.backward}><Icon
+                        name='previous'/></button>
                     {button}
-                    <div className={styles.control} onClick={this.forward}><Icon name='next'/></div>
+                    <button aria-label='Next' className={styles.control} onClick={this.forward}><Icon name='next'/>
+                    </button>
                     <div className={styles.progressBar} onClick={(e) => this.changeCurrentTime(e)}>
                         <span style={{width: `${progress}%`}}></span>
                     </div>
-                    <div className={`${styles.control} ${styles.controlSecondary} ${this.state.player.mode === EMode.Random && styles.controlActive}`} onClick={() => this.setMode(EMode.Random)}><Icon name='random'/></div>
-                    <div className={`${styles.control} ${styles.controlSecondary} ${this.state.player.mode === EMode.Repeat && styles.controlActive}`} onClick={() => this.setMode(EMode.Repeat)}><Icon name='repeat'/></div>
+                    <button aria-label='Random' aria-current={this.state.player.mode === EMode.Random}
+                            className={`${styles.control} ${styles.controlSecondary} ${this.state.player.mode === EMode.Random && styles.controlActive}`}
+                            onClick={() => this.setMode(EMode.Random)}><Icon name='random'/></button>
+                    <button aria-label='Repeat' aria-current={this.state.player.mode === EMode.Repeat}
+                            className={`${styles.control} ${styles.controlSecondary} ${this.state.player.mode === EMode.Repeat && styles.controlActive}`}
+                            onClick={() => this.setMode(EMode.Repeat)}><Icon name='repeat'/></button>
                     <span>Volume: {this.state.player.volume * 100}% </span>
-                    <div className={`${styles.control} ${styles.controlSecondary}`} onClick={this.volumeUp}><Icon name='volume-increase'/></div>
-                    <div className={`${styles.control} ${styles.controlSecondary}`} onClick={this.volumeDown}><Icon name='volume-decrease'/></div>
+                    <button aria-label='Volume increase' className={`${styles.control} ${styles.controlSecondary}`}
+                            onClick={this.volumeUp}><Icon name='volume-increase'/></button>
+                    <button aria-label='Volume decrease' className={`${styles.control} ${styles.controlSecondary}`}
+                            onClick={this.volumeDown}><Icon name='volume-decrease'/></button>
                 </div>
             </div>
         )

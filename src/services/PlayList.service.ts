@@ -2,7 +2,7 @@ import {ISong} from "../models/ISong";
 import {Subject, Subscription} from "rxjs";
 import {EMode, IPlayer} from "../models/IPlayer";
 import {audioService, getBlob} from "./Audio.service";
-import {Simulate} from "react-dom/test-utils";
+import {musicApiService} from "./MusicApi.service";
 
 class PlayListService {
     private _songs: ISong[] = [];
@@ -28,6 +28,30 @@ class PlayListService {
         this.subscriptions.push(audioService.endSong$.subscribe(() => {
             this.forward();
         }));
+
+        for (const key in localStorage) {
+            console.log(`${key}: ${localStorage.getItem(key)}`);
+        }
+
+        musicApiService.getTopByCountry('fr').then(response => {
+            console.log(response);
+            response.radios.forEach(item => {
+                this.addSong({
+                    id: getId(),
+                    src: item.uri,
+                    title: item.name,
+                    currentTime: 0,
+                    duration: 1,
+                    imageSrc: item.image_url
+                });
+            });
+
+            this.songs$.next(this._songs);
+        })
+    }
+
+    getActiveId() {
+        return this._activeId;
     }
 
     getPlayer(): IPlayer {
@@ -47,7 +71,7 @@ class PlayListService {
         this.activeSong$.next(song);
     }
 
-    addSong(file: File | null) {
+    addSongFromFile(file: File | null) {
         if (!file) {
             return;
         }
@@ -57,15 +81,25 @@ class PlayListService {
             return
         }
 
-        this._songs.push({
+        this.addSong({
             id: getId(),
             src: src,
             title: file.name,
             currentTime: 0,
-            duration: 1
+            duration: 1,
+            imageSrc: null
         });
 
         this.songs$.next(this._songs);
+    }
+
+    addSong(song: ISong) {
+        if (this._songs.some(a => a.title === song.title)) {
+            return false;
+        }
+
+        localStorage.setItem('song_' + song.title, JSON.stringify(song));
+        this._songs.push(song);
     }
 
     updateSong(song: ISong) {

@@ -16,6 +16,15 @@
   }
 }
 
+.hint {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-25%);
+  font-size: 24px;
+  color: darken($white, 40);
+}
+
 input[type="file"] {
   display: none;
 }
