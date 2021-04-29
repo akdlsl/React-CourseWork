@@ -2,7 +2,7 @@ import {IRadios} from "../models/IRadios";
 
 class MusicApiService {
     private _headers = {
-        "x-rapidapi-key": "c300d3a6efmsh64ebb59fa458606p12b639jsn37de74f703cb",
+        "x-rapidapi-key": "cb47a89a92mshbfaeebe2bd8b648p119867jsn4e83bee457cb",
         "x-rapidapi-host": "radio-world-50-000-radios-stations.p.rapidapi.com"
     };
 
@@ -10,6 +10,7 @@ class MusicApiService {
 
     async getTopByCountry(countryCode: string): Promise<IRadios> {
         const response = await this.sendRequest(`https://radio-world-50-000-radios-stations.p.rapidapi.com/v1/radios/getTopByCountry?query=${countryCode}`, 'GET');
+        console.log(response.ok);
         return await response.json();
     }
 

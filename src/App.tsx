@@ -13,11 +13,14 @@ class App extends Component {
     render() {
         return (
             <main className={'app'}>
-                <ContentComponent>
-                    <PlayListComponent/>
-                </ContentComponent>
-                <PlayBarComponent>
-                </PlayBarComponent>
+                <div className={'content-container'}>
+                    <ContentComponent>
+                        <PlayListComponent/>
+                    </ContentComponent>
+                </div>
+                <div className={'playbar-container'}>
+                    <PlayBarComponent/>
+                </div>
             </main>
         );
     }

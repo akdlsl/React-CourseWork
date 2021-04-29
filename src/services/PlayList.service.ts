@@ -30,24 +30,33 @@ class PlayListService {
         }));
 
         for (const key in localStorage) {
-            console.log(`${key}: ${localStorage.getItem(key)}`);
+            if (key.includes('song_')) {
+                this.addSong(JSON.parse(localStorage.getItem(key)));
+            }
         }
 
-        musicApiService.getTopByCountry('fr').then(response => {
-            console.log(response);
-            response.radios.forEach(item => {
-                this.addSong({
-                    id: getId(),
-                    src: item.uri,
-                    title: item.name,
-                    currentTime: 0,
-                    duration: 1,
-                    imageSrc: item.image_url
-                });
-            });
+        if (this._songs.length) {
+            this.selectSong(this._songs[0].id);
+        }
+    }
 
-            this.songs$.next(this._songs);
-        })
+    async loadTopPlaylistByCountry() {
+        const response = await musicApiService.getTopByCountry('fr');
+        if (!response) {
+            return;
+        }
+        response.radios.forEach(item => {
+            this.addSong({
+                id: getId(),
+                src: item.uri,
+                title: item.name,
+                currentTime: 0,
+                duration: 1,
+                imageSrc: item.image_url
+            });
+        });
+
+        this.songs$.next(this._songs);
     }
 
     getActiveId() {
@@ -56,6 +65,10 @@ class PlayListService {
 
     getPlayer(): IPlayer {
         return this._player;
+    }
+
+    getSongs(): ISong[] {
+        return this._songs;
     }
 
     findSongById(id: number): ISong | null {

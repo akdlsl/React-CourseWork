@@ -18,7 +18,7 @@ export class PlayBarComponent extends Component<any, PlayerBarState> {
         super(props);
 
         this.state = {
-            song: null,
+            song: playListService.findSongById(playListService.getActiveId()),
             player: playListService.getPlayer()
         };
     }
@@ -57,7 +57,7 @@ export class PlayBarComponent extends Component<any, PlayerBarState> {
                         break;
                 }
             }
-        )
+        );
     }
 
     componentWillUnmount(): void {
@@ -110,7 +110,7 @@ export class PlayBarComponent extends Component<any, PlayerBarState> {
     render() {
         if (!this.state.song || !this.state.player) {
             return (
-                <div className={styles.container}></div>
+                <div className={styles.container} style={{backgroundColor: '#121212'}}></div>
             )
         }
 
@@ -122,7 +122,8 @@ export class PlayBarComponent extends Component<any, PlayerBarState> {
                       onClick={this.play}><Icon name='play'/></button>;
         return (
             <div className={styles.container}>
-                <span className={styles.title}>{this.state.song?.title}</span>
+                <img src={this.state.song.imageSrc}/>
+                <span className={styles.title}>{this.state.song.title}</span>
                 <div className={styles.controls}>
                     <button aria-label='Previous' className={styles.control} onClick={this.backward}><Icon
                         name='previous'/></button>

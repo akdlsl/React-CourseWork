@@ -11,6 +11,11 @@ export class SongComponent extends Component<ISong, ISong> {
         this.state = Object.assign({}, props)
     }
 
+    componentDidMount(): void {
+        playListService.activeSong$.subscribe(value => {
+            this.setState(prevstate => prevstate);
+        })
+    }
 
     click = () => {
         playListService.selectSong(this.state.id)
@@ -19,6 +24,7 @@ export class SongComponent extends Component<ISong, ISong> {
     render() {
         return (
             <div role='listitem' aria-current={this.state.id === playListService.getActiveId()} tabIndex={0} className={styles.songContainer} onKeyUp={($event) => enterKeyFilter($event, this.click)} onClick={this.click}>
+                <img src={this.state.imageSrc}/>
                 <span className={styles.title}>{this.state.title}</span>
             </div>
         );
