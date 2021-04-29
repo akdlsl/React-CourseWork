@@ -1,0 +1,35 @@
+@import "../../styles/variables";
+
+.playList {
+  display: flex;
+  flex-flow: column;
+}
+
+.search {
+  height: 80%;
+  width: 100px;
+}
+
+.addSongBtn {
+  background: $black;
+  color: $white;
+  font-size: 18px;
+  margin: 15px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.hint {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-25%);
+  font-size: 24px;
+  color: darken($white, 40);
+}
+
+input[type="file"] {
+  display: none;
+}

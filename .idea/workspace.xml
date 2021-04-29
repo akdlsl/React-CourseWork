@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="018084bb-8220-4b1b-8368-04ce0489f043" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Content.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PlayBar/PlayBar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayBar/PlayBar.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PlayBar/PlayBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayBar/PlayBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PlayList/PlayList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayList/PlayList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PlayList/PlayList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayList/PlayList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Song/Song.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Song/Song.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Song/Song.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Song/Song.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/MusicApi.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/MusicApi.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/PlayList.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/PlayList.service.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="SCSS File" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1janunnvSeoxHrbDGAiCNWEkboI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="C:\web-labs\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\web-labs\src\components\SongComponent" />
+      <recent name="C:\web-labs\public" />
+      <recent name="C:\web-labs\src\components" />
+      <recent name="C:\web-labs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\web-labs\public" />
+      <recent name="C:\web-labs\src\icons" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="018084bb-8220-4b1b-8368-04ce0489f043" name="Default Changelist" comment="" />
+      <created>1604051294212</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604051294212</updated>
+      <workItem from="1604051295394" duration="254000" />
+      <workItem from="1606424198006" duration="559000" />
+      <workItem from="1606657892498" duration="1310000" />
+      <workItem from="1607671942099" duration="3768000" />
+      <workItem from="1607676252390" duration="4568000" />
+      <workItem from="1607717294141" duration="672000" />
+      <workItem from="1608147209438" duration="600000" />
+      <workItem from="1608235201709" duration="3461000" />
+      <workItem from="1608488003140" duration="1221000" />
+      <workItem from="1608500063068" duration="600000" />
+      <workItem from="1608877605764" duration="17000" />
+      <workItem from="1616953068765" duration="12627000" />
+      <workItem from="1616999015598" duration="429000" />
+      <workItem from="1617122405854" duration="7541000" />
+      <workItem from="1617305742195" duration="6731000" />
+      <workItem from="1618169692281" duration="2000" />
+      <workItem from="1618658962818" duration="42000" />
+      <workItem from="1618748734912" duration="12905000" />
+      <workItem from="1618984369180" duration="46000" />
+      <workItem from="1619028852783" duration="3564000" />
+      <workItem from="1619066547165" duration="6957000" />
+      <workItem from="1619113101384" duration="11636000" />
+      <workItem from="1619152911067" duration="13917000" />
+      <workItem from="1619196879696" duration="732000" />
+      <workItem from="1619269760058" duration="10918000" />
+      <workItem from="1619544743770" duration="8978000" />
+      <workItem from="1619589350260" duration="14000" />
+      <workItem from="1619672561800" duration="3426000" />
+      <workItem from="1619719438638" duration="9139000" />
+    </task>
+    <task id="LOCAL-00001" summary="lab8">
+      <created>1607675458221</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607675458221</updated>
+    </task>
+    <task id="LOCAL-00002" summary="lab11">
+      <created>1616999430311</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616999430311</updated>
+    </task>
+    <task id="LOCAL-00003" summary="lab11">
+      <created>1618658985904</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1618658985904</updated>
+    </task>
+    <task id="LOCAL-00004" summary="lab11">
+      <created>1619073667167</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619073667167</updated>
+    </task>
+    <task id="LOCAL-00005" summary="lab11">
+      <created>1619126349002</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1619126349003</updated>
+    </task>
+    <task id="LOCAL-00006" summary="lab11">
+      <created>1619166813975</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1619166813975</updated>
+    </task>
+    <task id="LOCAL-00007" summary="lab11">
+      <created>1619290018392</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1619290018392</updated>
+    </task>
+    <task id="LOCAL-00008" summary="lab11">
+      <created>1619677883676</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1619677883677</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="lab8" />
+    <MESSAGE value="lab11" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab11" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="703" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619546045735">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="703" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1619546045735" />
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619272978669">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1619272978669" />
+    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1619677883126">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1619677883126" />
+    <state width="1899" height="343" key="GridCell.Tab.0.bottom" timestamp="1619677919628">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="343" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1619677919628" />
+    <state width="1899" height="343" key="GridCell.Tab.0.center" timestamp="1619677919628">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="343" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1619677919628" />
+    <state width="1899" height="343" key="GridCell.Tab.0.left" timestamp="1619677919627">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="343" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1619677919627" />
+    <state width="1899" height="343" key="GridCell.Tab.0.right" timestamp="1619677919628">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="343" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1619677919628" />
+    <state x="656" y="252" width="607" height="536" key="find.popup" timestamp="1619677700399">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="252" width="607" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1619677700399" />
+    <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog" timestamp="1618857567329">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1618857567329" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1619071631299">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1619071631299" />
+  </component>
+</project>
