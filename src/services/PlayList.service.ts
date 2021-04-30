@@ -52,7 +52,8 @@ class PlayListService {
                 title: item.name,
                 currentTime: 0,
                 duration: 1,
-                imageSrc: item.image_url
+                imageSrc: item.image_url,
+                like: false
             });
         });
 
@@ -100,7 +101,8 @@ class PlayListService {
             title: file.name,
             currentTime: 0,
             duration: 1,
-            imageSrc: null
+            imageSrc: null,
+            like: false
         });
 
         this.songs$.next(this._songs);
@@ -113,6 +115,16 @@ class PlayListService {
 
         localStorage.setItem('song_' + song.title, JSON.stringify(song));
         this._songs.push(song);
+    }
+
+    removeSong(id: number) {
+        if (this._activeId === id) {
+            this.forward();
+        }
+
+        localStorage.removeItem('song_' + this._songs.find(a => a.id === id)?.title);
+        this._songs = this._songs.filter(a => a.id !== id);
+        this.songs$.next(this._songs);
     }
 
     updateSong(song: ISong) {

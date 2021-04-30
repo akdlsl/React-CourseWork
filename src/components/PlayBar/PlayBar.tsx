@@ -94,6 +94,9 @@ export class PlayBarComponent extends Component<any, PlayerBarState> {
     }
 
     changeCurrentTime = (e) => {
+        if (this.state.song.duration === Infinity) {
+            return;
+        }
         const rect = e.target.getBoundingClientRect();
         const x = e.clientX - rect.left; //x position within the element.
         const percent = (x / e.target.clientWidth) * 100;
@@ -122,7 +125,7 @@ export class PlayBarComponent extends Component<any, PlayerBarState> {
                       onClick={this.play}><Icon name='play'/></button>;
         return (
             <div className={styles.container}>
-                <img src={this.state.song.imageSrc}/>
+                <img src={this.state.song.imageSrc} alt={this.state.song.title}/>
                 <span className={styles.title}>{this.state.song.title}</span>
                 <div className={styles.controls}>
                     <button aria-label='Previous' className={styles.control} onClick={this.backward}><Icon
@@ -130,16 +133,18 @@ export class PlayBarComponent extends Component<any, PlayerBarState> {
                     {button}
                     <button aria-label='Next' className={styles.control} onClick={this.forward}><Icon name='next'/>
                     </button>
-                    <div className={styles.progressBar} onClick={(e) => this.changeCurrentTime(e)}>
+                    <div hidden={this.state.song.duration === Infinity} className={styles.progressBar}
+                         onClick={(e) => this.changeCurrentTime(e)}>
                         <span style={{width: `${progress}%`}}></span>
                     </div>
                     <button aria-label='Random' aria-current={this.state.player.mode === EMode.Random}
                             className={`${styles.control} ${styles.controlSecondary} ${this.state.player.mode === EMode.Random && styles.controlActive}`}
                             onClick={() => this.setMode(EMode.Random)}><Icon name='random'/></button>
-                    <button aria-label='Repeat' aria-current={this.state.player.mode === EMode.Repeat}
+                    <button hidden={this.state.song.duration === Infinity} aria-label='Repeat'
+                            aria-current={this.state.player.mode === EMode.Repeat}
                             className={`${styles.control} ${styles.controlSecondary} ${this.state.player.mode === EMode.Repeat && styles.controlActive}`}
                             onClick={() => this.setMode(EMode.Repeat)}><Icon name='repeat'/></button>
-                    <span>Volume: {this.state.player.volume * 100}% </span>
+                    <span style={{color: 'darkgray'}}>Volume: {Math.floor(this.state.player.volume * 100)}% </span>
                     <button aria-label='Volume increase' className={`${styles.control} ${styles.controlSecondary}`}
                             onClick={this.volumeUp}><Icon name='volume-increase'/></button>
                     <button aria-label='Volume decrease' className={`${styles.control} ${styles.controlSecondary}`}

@@ -6,4 +6,5 @@ export interface ISong {
     id: number;
     currentTime: number;
     duration: number;
+    like: boolean;
 }

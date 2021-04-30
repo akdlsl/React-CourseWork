@@ -6,7 +6,6 @@ import {playListService} from "../../services/PlayList.service";
 import {Subscription} from "rxjs";
 import {IData} from "../../models/IData";
 import {enterKeyFilter} from "../../utils/enterKeyFilter";
-import {Input} from "../Input/Input";
 
 export class PlayListComponent extends Component<any, IData<ISong[]>> {
     subscription: Subscription;
@@ -40,20 +39,23 @@ export class PlayListComponent extends Component<any, IData<ISong[]>> {
                            htmlFor="file-upload" className={styles.addSongBtn}>
                         Add Song
                     </label>
-                    <button className={styles.addSongBtn} onClick={() => playListService.loadTopPlaylistByCountry()}>Load PlayList FR</button>
-{/*                    <div className={styles.search}>
+                    <button className={styles.addSongBtn}
+                            onClick={() => playListService.loadTopPlaylistByCountry()}>Load PlayList FR
+                    </button>
+                    {/*                    <div className={styles.search}>
                         <Input onChange={($value) => console.log($value)}/>
                     </div>*/}
                 </div>
                 <input type="file" id="file-upload" onChange={(e) => this.addSong(e.target.files)}
                        accept=".M4A,.FLAC,.MP3,.MP4,.WAV,.WMA,.AAC"></input>
                 <div role='list' className={styles.playList}>
-                {this.state.data.length ? this.state.data.map(a => (
-                        <SongComponent src={a.src} title={a.title} id={a.id} currentTime={a.currentTime} imageSrc={a.imageSrc}
-                                       duration={a.duration}></SongComponent>
-                    ))
-                    : (<span role='note' className={styles.hint}> Click Add Song</span>)
-                }
+                    {this.state.data.length ? this.state.data.map(a => (
+                            <SongComponent src={a.src} title={a.title} id={a.id} currentTime={a.currentTime}
+                                           imageSrc={a.imageSrc}
+                                           duration={a.duration} like={a.like}></SongComponent>
+                        ))
+                        : (<span role='note' className={styles.hint}> Click Add Song</span>)
+                    }
                 </div>
             </div>
         )
